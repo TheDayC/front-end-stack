@@ -1,0 +1,28 @@
+/*
+* Bootstrap reset variables
+* Here we can override our default variables.
+* If you're unsure what a variable is called then simply search the files for the container and see what it references.
+*/
+
+/*
+* Grid gutter width - total size in px e.g. 10px = 5px each side.
+*/
+$grid-gutter-width:40px;
+
+/*
+* Container width resizes - use maths operators to add width to gutter
+*/
+// Small screen / tablet
+$container-tablet:             (720px + $grid-gutter-width);
+//** For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet;
+
+// Medium screen / desktop
+$container-desktop:            (940px + $grid-gutter-width);
+//** For `$screen-md-min` and up.
+$container-md:                 $container-desktop;
+
+// Large screen / wide desktop
+$container-large-desktop:      (1140px + $grid-gutter-width);
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop;

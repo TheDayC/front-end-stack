@@ -1,0 +1,13 @@
+# node_modules is too big to upload and would remove the point of a package manager.
+node_modules
+
+# Sass cache will be built when sass is compiled.
+\.sass-cache/
+
+# Ignore the contents of build directories. They will be added when gulp is run.
+build/css/*
+build/js/*
+
+# Keep directories themselves by allowing gitkeep files.
+!build/css/.gitkeep
+!build/js/.gitkeep

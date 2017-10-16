@@ -1,0 +1,65 @@
+html, body{
+  background-color:$bg;
+  &.white{
+    background-color: #fff;
+  }
+}
+
+#background{ 
+  padding:20px 20px 74px 20px; 
+  @media #{$kp-md}{
+    padding:100px 20px; 
+  }
+  p{
+    color:#fff;
+  }
+
+  #list{
+    padding:0;
+    .list-inner{
+      background:$list-checked;
+      height:500px; // This is just for testing purposes.
+      padding:20px;
+    }
+    @media #{$kp-md}{
+      padding:0 20px 0 0;
+    }
+  }
+  #button{
+    padding:0;
+    position:fixed;
+    bottom:0;
+    left:0;
+    @media #{$kp-md}{
+      position:relative;
+      bottom:auto;
+      left:auto;
+      padding:0 10px 0 15px;
+    }
+    .button-inner{
+      padding:15px;
+      @media #{$kp-md}{
+        padding:15px 0 15px 0;
+        border-top:2px solid $btn-border;
+        border-bottom:2px solid $btn-border;
+      }
+    }
+    .btn{
+      background:$green;
+      text-transform: none;
+      color:$btn-font;
+      font-weight:500;
+      padding:15px 10px;
+      &:hover{
+        text-decoration: none;
+        background:darken($green, 10);
+      }
+    }
+  }
+}
+
+.btn, .btn-large, .btn-floating, .btn-large, .btn-flat{
+  line-height:1em;
+  font-size:14px;
+  padding:10px;
+}

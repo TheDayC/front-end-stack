@@ -1,13 +1,1 @@
-$bg:#262E36;
-$subject_width: (1140px + $grid-gutter-width);
-$list-unchecked:#38424C;
-$list-checked:#2B333C;
-$green:#C1D72E;
-$btn-border:#38424c;
-
-// Here we declare a seperate variable for the btn font color. As we've already made a reference to this colour we inherit
-// but we maye want to change this in the future so worth creating.
-$btn-font:$bg;
-
-// media queries
-$kp-md: "only screen and (min-width: #{$container-md})";
+// Nothing here yet.

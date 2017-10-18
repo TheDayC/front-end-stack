@@ -49,15 +49,22 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     browserify = require('browserify'),
     babelify = require('babelify'),
-    buffer = require('vinyl-buffer')
-    source = require('vinyl-source-stream');
+    buffer = require('vinyl-buffer'),
+    source = require('vinyl-source-stream'),
+    plumber = require('gulp-plumber');
+
+/* Helpers */
+function watch_error(error) {
+  console.log("Error: " + error.toString());
+  this.emit('end');
+}
 
 /* Piping - lets us funnel plugin functionality into a certain order contained within a task */
 // CSS Task
 gulp.task('css', function(){
   return gulp.src(scss_paths.input)
-    .pipe(sass())
-    .pipe(sass(scss_options).on('error', sass.logError))
+    .pipe(plumber())
+    .pipe(sass(scss_options).on('error', watch_error))
     .pipe(sourcemaps.write())
     .pipe(autoprefixer(autoprefixer_options))
     .pipe(rename({ suffix: '.min' }))
